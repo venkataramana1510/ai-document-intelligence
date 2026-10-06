@@ -55,7 +55,7 @@ function App() {
     setAnswer(null);
 
     try {
-      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com", {
+      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com/upload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
