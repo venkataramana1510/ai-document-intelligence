@@ -1,4 +1,6 @@
 
+import os
+
 from pydantic import BaseModel
 from rag.qa_service import answer_question
 from models import DocumentData, UploadResponse
@@ -27,9 +29,11 @@ class ReviewRequest(BaseModel):
 app =  FastAPI(
             title="My API",
         )
+frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[frontend_url],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
