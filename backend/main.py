@@ -29,11 +29,14 @@ class ReviewRequest(BaseModel):
 app =  FastAPI(
             title="My API",
         )
-frontend_url = os.getenv("FRONTEND_URL", "http://localhost:5173")
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[frontend_url],
+      allow_origins=[
+        "https://ai-document-intelligence-coral.vercel.app",
+        "http://localhost:5173",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
