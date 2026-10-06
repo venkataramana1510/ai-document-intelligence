@@ -55,7 +55,7 @@ function App() {
     setAnswer(null);
 
     try {
-      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com/upload", {
+      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com", {
+      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com/review/approve", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
