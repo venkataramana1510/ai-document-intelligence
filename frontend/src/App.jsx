@@ -24,7 +24,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", file);
 
-      const response = await fetch("http://127.0.0.1:8000/upload", {
+      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com", {
         method: "POST",
         body: formData,
       });
@@ -55,7 +55,7 @@ function App() {
     setAnswer(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/ask", {
+      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/review/approve", {
+      const response = await fetch("https://ai-document-intelligence-vwlf.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
